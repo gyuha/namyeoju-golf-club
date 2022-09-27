@@ -1,5 +1,13 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'app')))
 
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+from PySide6.QtWidgets import QApplication
+from MainWindow import MainWindow
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+
+    window = MainWindow()
+    window.show()
+
+    sys.exit(app.exec())
