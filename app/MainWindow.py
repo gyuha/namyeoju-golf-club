@@ -1,21 +1,17 @@
 from datetime import datetime
 from enum import Enum
 from gettext import gettext
-from lib2to3.pgen2 import driver
-import re
-import threading
-import time
-from PySide6 import QtCore
-from PySide6 import QtGui
-import PySide6.QtCore
-from PySide6.QtWidgets import QListWidgetItem, QMainWindow
-from PySide6.QtCore import QTime, QTimer
 
-from app.ui.ui_MainWindow import Ui_MainWindow
+import PySide6.QtCore
+from PySide6 import QtCore, QtGui
+from PySide6.QtCore import QTime, QTimer
+from PySide6.QtWidgets import QListWidgetItem, QMainWindow
+from selenium.webdriver.common.by import By
+
 from app.lib.Config import Config
 from app.lib.webdriver import get_driver
-
-from selenium.webdriver.common.by import By
+from app.ui.ui_MainWindow import Ui_MainWindow
+from ReservationThread import ReservationThread
 
 
 class MainWindow(QMainWindow):
@@ -102,5 +98,8 @@ class MainWindow(QMainWindow):
 
         if self.run_count >= self.config.setting["runMultiple"]:
             self.stop()
+        th = ReservationThread(self)
+        th.start()
+        
     
 

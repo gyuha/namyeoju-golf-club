@@ -222,6 +222,14 @@
         "documentation": {}
     },
     {
+        "label": "QThread",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
         "label": "webdriver",
         "importPath": "selenium",
         "description": "selenium",
@@ -558,37 +566,11 @@
         "documentation": {}
     },
     {
-        "label": "driver",
-        "importPath": "lib2to3.pgen2",
-        "description": "lib2to3.pgen2",
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
         "isExtraImport": true,
-        "detail": "lib2to3.pgen2",
-        "documentation": {}
-    },
-    {
-        "label": "threading",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "threading",
-        "description": "threading",
-        "detail": "threading",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "Ui_MainWindow",
-        "importPath": "app.ui.ui_MainWindow",
-        "description": "app.ui.ui_MainWindow",
-        "isExtraImport": true,
-        "detail": "app.ui.ui_MainWindow",
+        "detail": "selenium.webdriver.common.by",
         "documentation": {}
     },
     {
@@ -608,11 +590,19 @@
         "documentation": {}
     },
     {
-        "label": "By",
-        "importPath": "selenium.webdriver.common.by",
-        "description": "selenium.webdriver.common.by",
+        "label": "Ui_MainWindow",
+        "importPath": "app.ui.ui_MainWindow",
+        "description": "app.ui.ui_MainWindow",
         "isExtraImport": true,
-        "detail": "selenium.webdriver.common.by",
+        "detail": "app.ui.ui_MainWindow",
+        "documentation": {}
+    },
+    {
+        "label": "ReservationThread",
+        "importPath": "ReservationThread",
+        "description": "ReservationThread",
+        "isExtraImport": true,
+        "detail": "ReservationThread",
         "documentation": {}
     },
     {
@@ -782,6 +772,15 @@
         "description": "app.MainWindow",
         "peekOfCode": "class MainWindow(QMainWindow):\n    TIMER_DELAY = 100\n    def __init__(self, parent=None):\n        super(MainWindow, self).__init__(parent)\n        self.config = Config()\n        self.ui = Ui_MainWindow()\n        self.ui.setupUi(self)\n        self.set_config_data()\n        self.__init_connect()\n        self.driver = None",
         "detail": "app.MainWindow",
+        "documentation": {}
+    },
+    {
+        "label": "ReservationThread",
+        "kind": 6,
+        "importPath": "app.ReservationThread",
+        "description": "app.ReservationThread",
+        "peekOfCode": "class ReservationThread(QThread):\n    def __init__(self, parent):\n        super().__init__(parent)\n        self.parent = parent\n    def run(self):\n        driver = self.parent.driver\n        tab = driver.switch_to.new_window('tab')\n        driver.get('https://www.namyeoju.co.kr/Reservation/Reservation.aspx')\n        print('📢[ReservationThread.py:12]')\n        tab.close()",
+        "detail": "app.ReservationThread",
         "documentation": {}
     },
     {
