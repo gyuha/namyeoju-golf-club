@@ -8,9 +8,9 @@ from PySide6.QtCore import QTime, QTimer
 from PySide6.QtWidgets import QListWidgetItem, QMainWindow
 from selenium.webdriver.common.by import By
 
-from app.lib.Config import Config
-from app.lib.webdriver import get_driver
-from app.ui.ui_MainWindow import Ui_MainWindow
+from lib.Config import Config
+from lib.webdriver import get_driver
+from ui.ui_MainWindow import Ui_MainWindow
 from ReservationThread import ReservationThread
 
 

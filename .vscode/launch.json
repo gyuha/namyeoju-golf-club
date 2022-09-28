@@ -5,18 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: 현재 파일",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal",
-            "justMyCode": true
-        },
-        {
             "name": "Main Application",
             "type": "python",
             "request": "launch",
-            "program": "main.py",
+            "program": "./app/main.py",
             "console": "integratedTerminal"
         }
     ]

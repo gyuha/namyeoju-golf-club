@@ -518,6 +518,14 @@
         "documentation": {}
     },
     {
+        "label": "QApplication",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QListWidgetItem",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
@@ -534,11 +542,20 @@
         "documentation": {}
     },
     {
-        "label": "QApplication",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
+        "label": "os,",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
+        "importPath": "os.",
+        "description": "os.",
+        "detail": "os.",
+        "documentation": {}
+    },
+    {
+        "label": "MainWindow",
+        "importPath": "MainWindow",
+        "description": "MainWindow",
+        "isExtraImport": true,
+        "detail": "MainWindow",
         "documentation": {}
     },
     {
@@ -575,26 +592,26 @@
     },
     {
         "label": "Config",
-        "importPath": "app.lib.Config",
-        "description": "app.lib.Config",
+        "importPath": "lib.Config",
+        "description": "lib.Config",
         "isExtraImport": true,
-        "detail": "app.lib.Config",
+        "detail": "lib.Config",
         "documentation": {}
     },
     {
         "label": "get_driver",
-        "importPath": "app.lib.webdriver",
-        "description": "app.lib.webdriver",
+        "importPath": "lib.webdriver",
+        "description": "lib.webdriver",
         "isExtraImport": true,
-        "detail": "app.lib.webdriver",
+        "detail": "lib.webdriver",
         "documentation": {}
     },
     {
         "label": "Ui_MainWindow",
-        "importPath": "app.ui.ui_MainWindow",
-        "description": "app.ui.ui_MainWindow",
+        "importPath": "ui.ui_MainWindow",
+        "description": "ui.ui_MainWindow",
         "isExtraImport": true,
-        "detail": "app.ui.ui_MainWindow",
+        "detail": "ui.ui_MainWindow",
         "documentation": {}
     },
     {
@@ -611,23 +628,6 @@
         "description": "namyeoju",
         "isExtraImport": true,
         "detail": "namyeoju",
-        "documentation": {}
-    },
-    {
-        "label": "os,",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os.",
-        "description": "os.",
-        "detail": "os.",
-        "documentation": {}
-    },
-    {
-        "label": "MainWindow",
-        "importPath": "MainWindow",
-        "description": "MainWindow",
-        "isExtraImport": true,
-        "detail": "MainWindow",
         "documentation": {}
     },
     {
