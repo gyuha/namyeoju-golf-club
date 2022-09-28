@@ -201,6 +201,16 @@
         </property>
        </widget>
       </item>
+      <item row="7" column="2">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>재시도 횟수</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="3">
+       <widget class="QLineEdit" name="leRetryCount"/>
+      </item>
      </layout>
     </item>
    </layout>

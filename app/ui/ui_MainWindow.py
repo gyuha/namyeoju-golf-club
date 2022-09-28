@@ -148,6 +148,16 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.teLog, 8, 0, 1, 4)
 
+        self.label_9 = QLabel(self.centralwidget)
+        self.label_9.setObjectName(u"label_9")
+
+        self.gridLayout.addWidget(self.label_9, 7, 2, 1, 1)
+
+        self.leRetryCount = QLineEdit(self.centralwidget)
+        self.leRetryCount.setObjectName(u"leRetryCount")
+
+        self.gridLayout.addWidget(self.leRetryCount, 7, 3, 1, 1)
+
 
         self.verticalLayout.addLayout(self.gridLayout)
 
@@ -176,5 +186,6 @@ class Ui_MainWindow(object):
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"\uc608\uc57d", None))
         self.btnStart.setText(QCoreApplication.translate("MainWindow", u"\uc2dc\uc791", None))
         self.teLog.setPlainText("")
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"\uc7ac\uc2dc\ub3c4 \ud69f\uc218", None))
     # retranslateUi
 

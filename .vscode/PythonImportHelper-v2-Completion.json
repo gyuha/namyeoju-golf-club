@@ -821,7 +821,7 @@
         "kind": 6,
         "importPath": "app.ReservationThread",
         "description": "app.ReservationThread",
-        "peekOfCode": "class ReservationThread(QThread):\n    def __init__(self, parent: MainWindow, retry_count: int = 5):\n        super().__init__(parent)\n        self.parent = parent\n        self.retry_count = retry_count\n    def run(self):\n        self.driver = self.parent.driver\n        self.retry_count = 5\n        self.check_reserve_date()\n    def check_reserve_date(self):",
+        "peekOfCode": "class ReservationThread(QThread):\n    def __init__(self, parent: MainWindow, retry_count: int = 5):\n        super().__init__(parent)\n        self.parent = parent\n        self.retry_count = retry_count\n        self.config = self.parent.config\n    def run(self):\n        self.driver = self.parent.driver\n        self.retry_count = 5\n        self.check_reserve_date()",
         "detail": "app.ReservationThread",
         "documentation": {}
     },

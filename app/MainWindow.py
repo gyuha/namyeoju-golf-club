@@ -51,9 +51,11 @@ class MainWindow(QMainWindow):
         end_time = QTime().fromString(input, "hh:mm")
         self.ui.teEndTime.setTime(end_time)
 
-        self.ui.leRunDuration.setText(str(self.config.setting["run_duration"]))
         self.run_duration = self.config.setting["run_duration"]
+        self.ui.leRunDuration.setText(str(self.run_duration))
+
         self.retry_count = self.config.setting["retry_count"]
+        self.ui.leRetryCount.setText(str(self.retry_count))
 
     def __init_connect(self):
         self.ui.btnStart.clicked.connect(self.on_click_start)
