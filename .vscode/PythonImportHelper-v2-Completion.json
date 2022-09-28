@@ -222,11 +222,36 @@
         "documentation": {}
     },
     {
+        "label": "QDate",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
         "label": "QThread",
         "importPath": "PySide6.QtCore",
         "description": "PySide6.QtCore",
         "isExtraImport": true,
         "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "selenium",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "selenium",
+        "description": "selenium",
+        "detail": "selenium",
+        "documentation": {}
+    },
+    {
+        "label": "webdriver",
+        "importPath": "selenium",
+        "description": "selenium",
+        "isExtraImport": true,
+        "detail": "selenium",
         "documentation": {}
     },
     {
@@ -398,7 +423,15 @@
         "documentation": {}
     },
     {
-        "label": "QDateTimeEdit",
+        "label": "QDateEdit",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFrame",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
         "isExtraImport": true,
@@ -407,14 +440,6 @@
     },
     {
         "label": "QGridLayout",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QHBoxLayout",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
         "isExtraImport": true,
@@ -438,23 +463,15 @@
         "documentation": {}
     },
     {
-        "label": "QListWidget",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QListWidgetItem",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
         "label": "QMainWindow",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPlainTextEdit",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
         "isExtraImport": true,
@@ -471,14 +488,6 @@
     },
     {
         "label": "QSizePolicy",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QSpacerItem",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
         "isExtraImport": true,
@@ -552,6 +561,15 @@
     },
     {
         "label": "MainWindow",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "MainWindow",
+        "description": "MainWindow",
+        "detail": "MainWindow",
+        "documentation": {}
+    },
+    {
+        "label": "MainWindow",
         "importPath": "MainWindow",
         "description": "MainWindow",
         "isExtraImport": true,
@@ -580,6 +598,14 @@
         "description": "gettext",
         "isExtraImport": true,
         "detail": "gettext",
+        "documentation": {}
+    },
+    {
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.by",
         "documentation": {}
     },
     {
@@ -620,6 +646,22 @@
         "description": "ReservationThread",
         "isExtraImport": true,
         "detail": "ReservationThread",
+        "documentation": {}
+    },
+    {
+        "label": "WebDriverWait",
+        "importPath": "selenium.webdriver.support.ui",
+        "description": "selenium.webdriver.support.ui",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.support.ui",
+        "documentation": {}
+    },
+    {
+        "label": "expected_conditions",
+        "importPath": "selenium.webdriver.support",
+        "description": "selenium.webdriver.support",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.support",
         "documentation": {}
     },
     {
@@ -761,7 +803,7 @@
         "kind": 6,
         "importPath": "app.ui.ui_MainWindow",
         "description": "app.ui.ui_MainWindow",
-        "peekOfCode": "class Ui_MainWindow(object):\n    def setupUi(self, MainWindow):\n        if not MainWindow.objectName():\n            MainWindow.setObjectName(u\"MainWindow\")\n        MainWindow.resize(582, 633)\n        self.action_always_top = QAction(MainWindow)\n        self.action_always_top.setObjectName(u\"action_always_top\")\n        self.action_always_top.setCheckable(True)\n        self.action_clipboard_toggle = QAction(MainWindow)\n        self.action_clipboard_toggle.setObjectName(u\"action_clipboard_toggle\")",
+        "peekOfCode": "class Ui_MainWindow(object):\n    def setupUi(self, MainWindow):\n        if not MainWindow.objectName():\n            MainWindow.setObjectName(u\"MainWindow\")\n        MainWindow.resize(629, 664)\n        self.action_always_top = QAction(MainWindow)\n        self.action_always_top.setObjectName(u\"action_always_top\")\n        self.action_always_top.setCheckable(True)\n        self.action_clipboard_toggle = QAction(MainWindow)\n        self.action_clipboard_toggle.setObjectName(u\"action_clipboard_toggle\")",
         "detail": "app.ui.ui_MainWindow",
         "documentation": {}
     },
@@ -779,7 +821,7 @@
         "kind": 6,
         "importPath": "app.ReservationThread",
         "description": "app.ReservationThread",
-        "peekOfCode": "class ReservationThread(QThread):\n    def __init__(self, parent):\n        super().__init__(parent)\n        self.parent = parent\n    def run(self):\n        driver = self.parent.driver\n        tab = driver.switch_to.new_window('tab')\n        driver.get('https://www.namyeoju.co.kr/Reservation/Reservation.aspx')\n        print('📢[ReservationThread.py:12]')\n        tab.close()",
+        "peekOfCode": "class ReservationThread(QThread):\n    def __init__(self, parent: MainWindow, retry_count: int = 5):\n        super().__init__(parent)\n        self.parent = parent\n        self.retry_count = retry_count\n    def run(self):\n        self.driver = self.parent.driver\n        self.retry_count = 5\n        self.check_reserve_date()\n    def check_reserve_date(self):",
         "detail": "app.ReservationThread",
         "documentation": {}
     },
