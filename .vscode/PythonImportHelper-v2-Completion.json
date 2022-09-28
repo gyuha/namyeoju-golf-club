@@ -53,6 +53,15 @@
         "documentation": {}
     },
     {
+        "label": "cryptocode",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cryptocode",
+        "description": "cryptocode",
+        "detail": "cryptocode",
+        "documentation": {}
+    },
+    {
         "label": "QtCore",
         "importPath": "PySide6",
         "description": "PySide6",
@@ -617,6 +626,14 @@
         "documentation": {}
     },
     {
+        "label": "Crypto",
+        "importPath": "lib.Crypto",
+        "description": "lib.Crypto",
+        "isExtraImport": true,
+        "detail": "lib.Crypto",
+        "documentation": {}
+    },
+    {
         "label": "Config",
         "importPath": "lib.Config",
         "description": "lib.Config",
@@ -751,6 +768,24 @@
         "description": "app.lib.Config",
         "peekOfCode": "class Config(metaclass=Singleton):\n    @property\n    def data(self):\n        return self.__data\n    @data.setter\n    def data(self, value):\n        self.__data = value\n    @property\n    def setting(self):\n        return self.__data[\"setting\"]",
         "detail": "app.lib.Config",
+        "documentation": {}
+    },
+    {
+        "label": "Crypto",
+        "kind": 6,
+        "importPath": "app.lib.Crypto",
+        "description": "app.lib.Crypto",
+        "peekOfCode": "class Crypto: \n    @staticmethod\n    def encrypt(text: str) -> str:\n        return cryptocode.encrypt(text, CRYPT_KEY)\n    @staticmethod\n    def decrypt(text: str) -> str:\n        return cryptocode.decrypt(text, CRYPT_KEY)",
+        "detail": "app.lib.Crypto",
+        "documentation": {}
+    },
+    {
+        "label": "CRYPT_KEY",
+        "kind": 5,
+        "importPath": "app.lib.Crypto",
+        "description": "app.lib.Crypto",
+        "peekOfCode": "CRYPT_KEY = '5c289a75-7fc7-4814-b817-a0dbe2c773c2'\nclass Crypto: \n    @staticmethod\n    def encrypt(text: str) -> str:\n        return cryptocode.encrypt(text, CRYPT_KEY)\n    @staticmethod\n    def decrypt(text: str) -> str:\n        return cryptocode.decrypt(text, CRYPT_KEY)",
+        "detail": "app.lib.Crypto",
         "documentation": {}
     },
     {

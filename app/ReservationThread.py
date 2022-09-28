@@ -45,8 +45,6 @@ class ReservationThread(QThread):
         target_date = self.config.setting["reserve_date"].strip()
         day = None
         for d in days:
-            print('📢[ReservationThread.py:32]', d.text)
-            print('📢[ReservationThread.py:32]', d.get_attribute("href"))
             href = d.get_attribute("href")
             if target_date in href:
                 print('📢[ReservationThread.py:53]: ', d.text)

@@ -7,6 +7,7 @@ from PySide6 import QtCore, QtGui
 from PySide6.QtCore import QTime, QTimer, QDate
 from PySide6.QtWidgets import QListWidgetItem, QMainWindow
 from selenium.webdriver.common.by import By
+from lib.Crypto import Crypto
 
 from lib.Config import Config
 from lib.webdriver import get_driver
@@ -34,7 +35,8 @@ class MainWindow(QMainWindow):
 
     def set_config_data(self):
         self.ui.leID.setText(self.config.setting["id"])
-        self.ui.lePassword.setText(self.config.setting["password"])
+        if self.config.setting["password"]:
+            self.ui.lePassword.setText(Crypto.decrypt(self.config.setting["password"]))
 
         # 예약일
         reserve_date = QDate.fromString(
@@ -60,7 +62,23 @@ class MainWindow(QMainWindow):
     def __init_connect(self):
         self.ui.btnStart.clicked.connect(self.on_click_start)
 
+    def save_config(self):
+        self.config.setting["id"] = self.ui.leID.text().strip()
+        self.config.setting["password"] = Crypto.encrypt(
+            self.ui.lePassword.text().strip()
+        )
+
+        self.config.setting["reserve_date"] = self.ui.deReserveDate.dateTime().toString(
+            "yyyy-MM-dd"
+        )
+        self.config.setting["start_time"] = self.ui.teStartTime.time().toString("hh:mm")
+        self.config.setting["end_time"] = self.ui.teEndTime.time().toString("hh:mm")
+        self.config.setting["retry_count"] = int(self.ui.leRetryCount.text())
+        self.config.setting["run_duration"] = int(self.ui.leRunDuration.text())
+        self.config.save()
+
     def on_click_start(self):
+        self.save_config()
         self.driver = get_driver()
         self.login()
 
@@ -69,7 +87,7 @@ class MainWindow(QMainWindow):
         if self.is_login == True:
             return
 
-        url = self.config.setting["loginUrl"]
+        url = self.config.setting["login_url"]
         self.log("로그인 시도")
         self.driver.get(url)
         self.driver.implicitly_wait(15)
@@ -104,8 +122,10 @@ class MainWindow(QMainWindow):
     def log(self, text: str):
         now = datetime.now().strftime("%Y/%d/%m %H:%M%S")
         text = self.ui.teLog.appendPlainText("[{0}]: {1}".format(now, text))
-        self.ui.teLog.verticalScrollBar().setValue(self.ui.teLog.verticalScrollBar().maximum())
-    
+        self.ui.teLog.verticalScrollBar().setValue(
+            self.ui.teLog.verticalScrollBar().maximum()
+        )
+
     def stop(self):
         self.ui.btnStart.setEnabled(True)
 
